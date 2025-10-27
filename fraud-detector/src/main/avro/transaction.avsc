@@ -1,0 +1,20 @@
+{
+  "type": "record",
+  "name": "Transaction",
+  "namespace": "com.detector.avro",
+  "fields": [
+    { "name": "id", "type": "int" },
+    { "name": "value", "type": "int" },
+    { "name": "location", "type": "string" },
+    { "name": "sourceAccountId", "type": "int" },
+    { "name": "targetAccountId", "type": "int" },
+    {
+      "name": "currency",
+      "type": {
+        "type": "enum",
+        "name": "Currency",
+        "symbols": ["USD","EUR","JPY","GBP","CNY","AUD","CAD","CHF","HKD","SGD","KRW","SEK","NOK","NZD","INR","MXN","RUB","ZAR","TRY","BRL"]
+      }
+    }
+  ]
+}
